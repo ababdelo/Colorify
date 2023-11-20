@@ -5,9 +5,17 @@
 ## Preview
 <br>
 
-  |       <p align="center"> <br> ` Program Preview ` <br> </p>       |
+  |       <p align="center"> <br> ` Program Main Preview ` <br> </p>       |
   | :----------------------------------------------: |
-  | <br> <a><img src=https://github.com/ababdelo/Colorify/blob/preview/Screenshot.png> </a> <br> |
+  | <br> <a><img src=https://github.com/ababdelo/Colorify/blob/preview/preview/main.png> </a> <br> |
+
+  |       <p align="center"> `Program Success_1` </p>       |    <p align="center"> `Program Success_2` </p>     |       <p align="center"> `Program Success_3` </p>       |
+  | :----------------------------------------------: | :------------------------------------------: | :----------------------------------------------: |
+  | <br> <a><img src=https://github.com/ababdelo/Colorify/blob/preview/preview/success_1.png> </a> <br> | <br> <a> <img src=https://github.com/ababdelo/Colorify/blob/preview/preview/success_2.png> </a> <br> | <br> <a><img src=https://github.com/ababdelo/Colorify/blob/preview/preview/success_3.png> </a> <br> |
+
+  |       <p align="center"> `Program Failure_1` </p>       |    <p align="center"> `Program Failure_2` </p>     |
+  | :----------------------------------------------: | :------------------------------------------: |
+  | <br> <a><img src=https://github.com/ababdelo/Colorify/blob/preview/preview/failure_1.png> </a> <br> | <br> <a> <img src=https://github.com/ababdelo/Colorify/blob/preview/preview/failure_2.png> </a> <br> |
 
 <br>
 
