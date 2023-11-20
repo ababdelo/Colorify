@@ -22,16 +22,20 @@ void clearConsole() {
 }
 #endif
 
-void    ask4clear(){
+int    ask4option(){
     std::string userInput;
-    std::cout << "\nType 'clear' And To Clear The Console Or Type Anything To Skip: ";
+    std::cout << "\nType 'clear' And To Clear The Console Or Type 'exit' To End The Program: ";
     std::getline(std::cin, userInput);
 
     if (userInput == "clear" || userInput == "CLEAR") {
         clearConsole();
+        return 1;
+    }
+    else    if (userInput == "exit" || userInput == "EXIT") {
+        return 0;
     }
     else
-        return;
+        return -1;
 }
 
 int main() {
@@ -79,7 +83,7 @@ int main() {
         }
         std::cout << "\t| 9.     Transparent\t|\t\t\t|\t\t |" << std::endl;
         std::cout << "\t+-----------------------+-----------------------+----------------+" << std::endl;
-        std::cout << "\n </> Your Inputs: ";
+        std::cout << "\n </> Enter Your choices: ";
   
         std::string userInput;
         std::getline(std::cin, userInput);
@@ -94,8 +98,9 @@ int main() {
         size_t pos3 = userInput.find(' ', pos2 + 1);
 
         if (pos1 == std::string::npos || pos2 == std::string::npos || pos3 != std::string::npos) {
-            std::cerr << "\n---> ERROR: " << colors.getTextColor("Red") << "Invalid input. Please enter exactly three numbers." << colors.reset() << std::endl;
-            ask4clear();
+            std::cerr << colors.getTextColor("Red") << "\n---> ERROR: "  << colors.reset() << "Invalid input. Please enter exactly three numbers." << std::endl;
+            if (ask4option() == 0)
+                break;
             continue;
         }
 
@@ -108,24 +113,26 @@ int main() {
         size_t choice3 = std::atoi(strChoice3.c_str());
 
         if (choice1 <= 0 || choice1 > 9 || choice2 <= 0 || choice2 > 8 || choice3 <= 0 || choice3 > 5) {
-            std::cerr << "\n---> ERROR: " << colors.getTextColor("Red") << "Invalid choices. Please enter three valid numbers." << colors.reset() << std::endl;
-            ask4clear();
+            std::cerr << colors.getTextColor("Red") << "\n---> ERROR: "  << colors.reset() << "Invalid choices. Please enter three valid numbers." << std::endl;
+            if (ask4option() == 0)
+                break;
             continue;
         }
 
         std::string userString;
 
-        std::cout << "---> Enter a string to Customize: " << colors.reset();
+        std::cout << "\n </> Enter Your String: ";
         std::getline(std::cin, userString);
 
-        std::cout << "\n---> OUTPUT: ";
+        std::cout << colors.getTextColor("Green") << "\n---> OUTPUT: "  << colors.reset();
 
         std::cout << colors.getBackGroundColor(backgroundColorOptions[choice1 - 1])
                 << colors.getTextStyle(textStyleOptions[choice3 - 1])
                 << colors.getTextColor(foregroundColorOptions[choice2 - 1])
                 << userString
                 << colors.reset() << std::endl;
-        ask4clear();
+            if (ask4option() == 0)
+                break;
     }
 
     return 0;
