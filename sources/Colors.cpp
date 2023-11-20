@@ -6,11 +6,11 @@
 /*   By: ababdelo <ababdelo@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:42:43 by ababdelo          #+#    #+#             */
-/*   Updated: 2023/11/18 14:37:58 by ababdelo         ###   ########.fr       */
+/*   Updated: 2023/11/20 10:23:48 by ababdelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "colors.hpp"
+#include "../includes/Colors.hpp"
 
 void Colors::set_colors_values() {
     // Define the color codes

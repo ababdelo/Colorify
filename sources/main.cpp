@@ -6,11 +6,11 @@
 /*   By: ababdelo <ababdelo@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:16:46 by ababdelo          #+#    #+#             */
-/*   Updated: 2023/11/18 16:20:34 by ababdelo         ###   ########.fr       */
+/*   Updated: 2023/11/20 10:24:17 by ababdelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "colors.hpp"
+#include "../includes/Colors.hpp"
 
 #ifdef _WIN32
 void clearConsole() {
@@ -52,13 +52,14 @@ int main() {
     };
 
     while (true) {
-        std::cout << "\n\t\tColorful Phrase Customization Program\n" << std::endl;
-        std::cout << "+-----------------------+-----------------------+----------------+" << std::endl;
-        std::cout << "| Background Colors:\t| Foreground Colors:\t| Text Styles:   |" << std::endl;
-        std::cout << "+-----------------------+-----------------------+----------------+" << std::endl;
+        std::cout << "\n\t\t\tColorful Phrase Customization Program\n" << std::endl;
+        std::cout << "</> Choose Your Preferred Colors And Style To Customize Your Phrase Or Type 'exit' To End The Program\n" << std::endl;
+        std::cout << "\t+-----------------------+-----------------------+----------------+" << std::endl;
+        std::cout << "\t| Background Colors:\t| Foreground Colors:\t| Text Styles:   |" << std::endl;
+        std::cout << "\t+-----------------------+-----------------------+----------------+" << std::endl;
 
         for (size_t i = 0; i < 8; ++i) {
-            std::cout << "| " << i + 1 << ". " << colors.getBackGroundColor(backgroundColorOptions[i]) << "   " << colors.reset() << " " 
+            std::cout << "\t| " << i + 1 << ". " << colors.getBackGroundColor(backgroundColorOptions[i]) << "   " << colors.reset() << " " 
                     << backgroundColorOptions[i] << colors.reset();
             if (i == 5)
                 std::cout << "\t| ";
@@ -74,11 +75,11 @@ int main() {
                 std::cout << " |\n";
             else
                 std::cout << "\t\t |\n";
-            std::cout << "+-----------------------+-----------------------+----------------+" << std::endl; 
+            std::cout << "\t+-----------------------+-----------------------+----------------+" << std::endl; 
         }
-        std::cout << "| 9.     Transparent\t|\t\t\t|\t\t |" << std::endl;
-        std::cout << "+-----------------------+-----------------------+----------------+" << std::endl;
-        std::cout << "\n </> Choose Your Preferred Colors And Style To Customize Your Phrase Or Type 'exit' To End The Program: ";
+        std::cout << "\t| 9.     Transparent\t|\t\t\t|\t\t |" << std::endl;
+        std::cout << "\t+-----------------------+-----------------------+----------------+" << std::endl;
+        std::cout << "\n </> Your Inputs: ";
   
         std::string userInput;
         std::getline(std::cin, userInput);
