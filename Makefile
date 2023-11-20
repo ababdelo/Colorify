@@ -23,16 +23,16 @@
 ifeq ($(OS), Windows_NT)
     CC := g++
     EXE := Colorify.exe
-    OS_MSG := Windows OS
+    OS_MSG := Windows
 else
     CC := c++
     EXE := Colorify
-    OS_MSG := Other OS
+    OS_MSG := Other
 endif
 
 # Hide calls
 export VERBOSE	=	TRUE
-ifeq ($(VERBOSE),TRUE)
+ifeq ($(VERBOSE),FALSE)
 	HIDE =
 else
 	HIDE = @
@@ -46,10 +46,20 @@ endif
 CFLAGS := -Wall -Werror -Wextra -std=c++98 -I.
 RM := rm -rf
 
+# Compilation commands
+COMPILE_CMD = $(CC) $(CFLAGS) -c $< -o $@
+LINK_CMD = $(CC) $(CFLAGS) $(OBJS) -o $@
+
 # Dir and file names
 SRCS := sources/main.cpp sources/Colors.cpp
 OBJS := $(SRCS:.cpp=.o)
 INC := $(wildcard includes/*.hpp)
+
+# Messages
+CHECK_MARK = \xe2\x9c\x94
+CLN_MSG = ${HIDE}echo -e "${CHECK_MARK} Cleaning up ' .o ' files"
+FCLN_MSG = ${HIDE}echo -e "${CHECK_MARK} Full clean-up: Removing ' .o ' files and executable"
+MAKE_MSG = ${HIDE}echo -e "${CHECK_MARK} Building the program for ' ${OS_MSG} ' OS"
 
 #------------------------------------------------------------------------------#
 #                                 TARGETS                                      #
@@ -67,22 +77,24 @@ help:
 	@echo -e "  \033[1;37mhelp\033[0m     : Display this help message"
 
 all: $(EXE)
-	@echo "Built for $(OS_MSG)"
+	$(MAKE_MSG)
 
 # Generates output file
 $(EXE): $(OBJS)
-	$(HIDE)$(CC) $(CFLAGS) $(OBJS) -o $@
+	$(HIDE)$(LINK_CMD)
 
 # Compiles sources into objects
 %.o: %.cpp $(INC)
-	$(HIDE)$(CC) $(CFLAGS) -c $< -o $@
+	$(HIDE)$(COMPILE_CMD)
 
 # Removes objects
 clean:
+	$(CLN_MSG)
 	$(HIDE)$(RM) $(OBJS)
 
 # Removes objects and executables
 fclean: clean
+	$(FCLN_MSG)
 	$(HIDE)$(RM) $(EXE)
 
 # Removes objects and executables and remakes
