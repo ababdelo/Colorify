@@ -41,7 +41,7 @@ Before running ` Colorify `, ensure that your system meets the following require
 
 1. Clone the repository.
   ```bash
-     git clone https://github.com/ababdelo/ColorifyText.git
+     git clone https://github.com/ababdelo/Colorify.git
      cd Colorify
   ```
 
