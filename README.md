@@ -5,17 +5,17 @@
 ## Preview
 <br>
 
-  |       <p align="center"> <br> ` Program Main Preview ` <br> </p>       |
+  |       <br><p align="center"> ` Program Main Preview ` </p>      |
   | :----------------------------------------------: |
-  | <br> <a><img src=https://github.com/ababdelo/Colorify/blob/preview/preview/main.png> </a> <br> |
+  | <br> <a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src=https://github.com/ababdelo/Colorify/blob/preview/preview/main.png width="700"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a> <br><br> |
 
   |       <p align="center"> `Program Success_1` </p>       |    <p align="center"> `Program Success_2` </p>     |       <p align="center"> `Program Success_3` </p>       |
   | :----------------------------------------------: | :------------------------------------------: | :----------------------------------------------: |
-  | <br> <a><img src=https://github.com/ababdelo/Colorify/blob/preview/preview/success_1.png> </a> <br> | <br> <a> <img src=https://github.com/ababdelo/Colorify/blob/preview/preview/success_2.png> </a> <br> | <br> <a><img src=https://github.com/ababdelo/Colorify/blob/preview/preview/success_3.png> </a> <br> |
+  | <br> <a><img align="center" src=https://github.com/ababdelo/Colorify/blob/preview/preview/success_1.png> </a> <br><br> | <br> <a> <img align="center" src=https://github.com/ababdelo/Colorify/blob/preview/preview/success_2.png> </a> <br><br> | <br> <a><img align="center" src=https://github.com/ababdelo/Colorify/blob/preview/preview/success_3.png> </a> <br><br> |
 
   |       <p align="center"> `Program Failure_1` </p>       |    <p align="center"> `Program Failure_2` </p>     |
   | :----------------------------------------------: | :------------------------------------------: |
-  | <br> <a><img src=https://github.com/ababdelo/Colorify/blob/preview/preview/failure_1.png> </a> <br> | <br> <a> <img src=https://github.com/ababdelo/Colorify/blob/preview/preview/failure_2.png> </a> <br> |
+  | <br> <a><img align="center" src=https://github.com/ababdelo/Colorify/blob/preview/preview/failure_1.png> </a> <br><br> | <br> <a> <img src=https://github.com/ababdelo/Colorify/blob/preview/preview/failure_2.png> </a> <br><br> |
 
 <br>
 
