@@ -47,8 +47,7 @@ Before running ` Colorify `, ensure that your system meets the following require
 
 2. Build & Run:
   ```bash
-    make all
-    make run
+    make all; make run
   ```
 
 To view available targets and their descriptions, run:
