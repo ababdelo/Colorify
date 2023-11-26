@@ -61,12 +61,12 @@ Output:
   Usage: make [target]
   
     Targets:
-      all      : Build the executable (default)
+      all      : Build the executable
       clean    : Remove object files
       fclean   : Remove object files and the executable
       re       : Remove all generated files and rebuild
       run      : Clean and run the executable
-      help     : Display this help message
+      help     : Display this help message (default)
 ```
 
 ## Usage:
