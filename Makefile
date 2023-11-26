@@ -6,7 +6,7 @@
 #    By: ababdelo <ababdelo@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/16 13:22:16 by ababdelo          #+#    #+#              #
-#    Updated: 2023/11/20 11:05:29 by ababdelo         ###   ########.fr        #
+#    Updated: 2023/11/26 14:11:09 by ababdelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,10 +61,10 @@ NEEDS_BUILD := $(shell [ "$(OBJS)" -ot "$(SRCS)" ] && printf 1 || printf 0 )
 CHECK_MARK = \033[1;32m\xe2\x9c\x94\033[0m
 X_MARK = \033[1;31m\xe2\x9c\x98\033[0m
 
-CLN_MSG = ${HIDE}printf "${CHECK_MARK} Cleaning up ' .o ' files\n"
-FCLN_MSG = ${HIDE}printf "${CHECK_MARK} Full clean-up: Removing ' .o ' files and executable\n"
-MAKE_MSG = printf "${CHECK_MARK} Building the program for ' ${OS_MSG} ' OS\n"
-NO_BUILD_MSG = printf "${X_MARK} Nothing to compile. Everything is up to date for: ' ${EXE} '\n"
+CLN_MSG = ${HIDE}printf "${CHECK_MARK} \033[1;33mBase clean-up\033[0m: Successfully Removed Objects Files\n"
+FCLN_MSG = ${HIDE}printf "${CHECK_MARK} \033[1;31mFull clean-up\033[0m: Successfully Removed Objects Files and Executable\n"
+MAKE_MSG = printf "${CHECK_MARK} \033[1;32mBuilding\033[0m: Successfully Compiled Sources Files and Builded the Executable for '\033[1;36m${OS_MSG}\033[0m' OS\n"
+NO_BUILD_MSG = printf "${X_MARK} No need to compile! Executable '\033[1;34m${EXE}\033[0m' is up to date for '\033[1;36m${OS_MSG}\033[0m'  OS\n"
 
 #------------------------------------------------------------------------------#
 #                                 TARGETS                                      #
@@ -115,4 +115,4 @@ re: fclean
 
 # Run the executable
 run: clean
-	$(HIDE)./$(EXE)
+	$(HIDE)./$(EXE)	
