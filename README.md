@@ -1,3 +1,5 @@
+<h1 align="center"> <br> <img src="https://socialify.git.ci/ababdelo/Colorify/image?description=1&forks=1&issues=1&language=1&owner=1&stargazers=1&theme=Dark" width="550"> <br><br> </h1>
+
 # Colorify
 
 ` Colorify ` is a lightweight and interactive console application that allows users to customize and colorize their text phrases using a variety of background colors, foreground colors, and text styles.<br> With an easy-to-use interface, users can experiment with different combinations to create visually appealing and colorful text outputs.
